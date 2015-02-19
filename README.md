@@ -10,7 +10,7 @@ This step will download the specified version of [html-proofer](https://github.c
 
 Specifies the version of html-proofer to be used, by default this is `>2.1.0`. 
 
-## basedir
+## basedir (optional)
 Specifies the base directory in which to run the tests. For example, if you have static content being generated to the `_site` directory, specify `_site` here.
 
 # Example wercker.yml
