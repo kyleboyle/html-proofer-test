@@ -8,7 +8,7 @@ This step will download the specified version of [html-proofer](https://github.c
 
 ## version (optional/recommended)
 
-Specifies the version of html-proofer to be used, by default this is `>2.1.0`. 
+Specifies the version of html-proofer to be used, by default this is `2.1.0`. 
 
 ## basedir (optional)
 Specifies the base directory in which to run the tests. For example, if you have static content being generated to the `_site` directory, specify `_site` here.
@@ -20,6 +20,10 @@ box: wercker/ruby
 build:
   steps:
     - kyleboyle/html-proofer-test:
-        version: ">=2.1.0"
+        version: "2.1.0"
         basedir: public
 ```
+
+#TODO
+- [ ] Expose html-proofer arguments
+- [ ] support links/src with baked in base url see [PR](https://github.com/gjtorikian/html-proofer/pull/178)
