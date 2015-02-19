@@ -6,7 +6,7 @@ fi
 
 cd $WERCKER_SOURCE_DIR/$WERCKER_HTML_PROOFER_TEST_BASEDIR
 
-gem install html-proofer:'$WERCKER_HTML_PROOFER_TEST_VERSION'
+gem install html-proofer:"'$WERCKER_HTML_PROOFER_TEST_VERSION'"
 
 htmlproof --verbose
 
