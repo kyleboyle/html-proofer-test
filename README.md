@@ -20,6 +20,6 @@ box: wercker/ruby
 build:
   steps:
     - kyleboyle/html-proofer-test:
-        version: ">2.1.0"
+        version: ">=2.1.0"
         basedir: public
 ```
