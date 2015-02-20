@@ -1,8 +1,6 @@
 # Wercker Step html-proofer-test
 
-* Requires Ruby base
-
-This step will download the specified version of [html-proofer](https://github.com/gjtorikian/html-proofer) and run its checks against the specified directory.
+This step will download the specified version of [html-proofer](https://github.com/gjtorikian/html-proofer) ruby gem and run its checks against the specified directory.
 
 # Parameters
 
