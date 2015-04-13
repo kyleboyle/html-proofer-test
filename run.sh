@@ -13,10 +13,7 @@ export GEM_HOME=$WERCKER_CACHE_DIR/html-proofer/gems
 mkdir -p $GEM_HOME
 gem install html-proofer $WERCKER_HTML_PROOFER_TEST_VERSION
 
-
-cd $WERCKER_SOURCE_DIR/$WERCKER_HTML_PROOFER_TEST_BASEDIR
-
-$GEM_HOME/bin/htmlproof --verbose
+eval $GEM_HOME/bin/htmlproof $WERCKER_SOURCE_DIR/$WERCKER_HTML_PROOFER_TEST_BASEDIR $WERCKER_HTML_PROOFER_TEST_ARGUMENTS
 
 #export ARGS='{:href_swap => {/http:\/\/baseurl\.com/ => ""} }'
 #ruby -e "require 'html/proofer'" -e "HTML::Proofer.new('.', $ARGS).run"

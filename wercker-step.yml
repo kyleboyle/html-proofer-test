@@ -11,3 +11,7 @@ properties:
         type: string
         default: ""
         required: false
+    arguments:
+        type: string
+        default: "--verbose"
+        required: false
