@@ -2,6 +2,8 @@
 
 This step will download the specified version of [html-proofer](https://github.com/gjtorikian/html-proofer) ruby gem and run its checks against the specified directory.
 
+[![wercker status](https://app.wercker.com/status/c189a79239749cf5ce5ba0a13423ae26/m "wercker status")](https://app.wercker.com/project/bykey/c189a79239749cf5ce5ba0a13423ae26)
+
 # Parameters
 
 ## version (optional/recommended)
