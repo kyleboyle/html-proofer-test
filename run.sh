@@ -6,6 +6,13 @@ command -v ruby >/dev/null 2>&1 || { echo "Ruby is required, but not installed. 
 ruby_version=`ruby -v`
 echo "Found $ruby_version"
 
+# set correct gems argument for no documentation
+if [[ "$ruby_version" =~ "ruby 1" ]]; then
+    no_doc="--no-rdoc --no-ri"
+else
+    no_doc="-N"
+fi
+
 if [ -n "$WERCKER_HTML_PROOFER_TEST_VERSION" ]; then
     export WERCKER_HTML_PROOFER_TEST_VERSION="-v $WERCKER_HTML_PROOFER_TEST_VERSION"
 else
@@ -17,7 +24,7 @@ export OLD_GEM_HOME=$GEM_HOME
 # install ruby gem
 export GEM_HOME=$WERCKER_CACHE_DIR/html-proofer/gems
 mkdir -p $GEM_HOME
-gem install html-proofer $WERCKER_HTML_PROOFER_TEST_VERSION
+gem install html-proofer $WERCKER_HTML_PROOFER_TEST_VERSION $no_doc
 
 eval $GEM_HOME/bin/htmlproof $WERCKER_SOURCE_DIR/$WERCKER_HTML_PROOFER_TEST_BASEDIR $WERCKER_HTML_PROOFER_TEST_ARGUMENTS
 
