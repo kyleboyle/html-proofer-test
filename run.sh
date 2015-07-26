@@ -1,5 +1,11 @@
 #/bin/bash
 
+# check if Ruby is installed
+command -v ruby >/dev/null 2>&1 || { echo "Ruby is required, but not installed. Aborting..." >&2; exit 1; }
+
+ruby_version=`ruby -v`
+echo "Found $ruby_version"
+
 if [ -n "$WERCKER_HTML_PROOFER_TEST_VERSION" ]; then
     export WERCKER_HTML_PROOFER_TEST_VERSION="-v $WERCKER_HTML_PROOFER_TEST_VERSION"
 else
