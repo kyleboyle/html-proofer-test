@@ -30,7 +30,7 @@ else
     fi
     
     export OLD_GEM_HOME=$GEM_HOME
-    
+    export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
     # install ruby gem
     #export GEM_HOME=$WERCKER_CACHE_DIR/html-proofer/gems
     #mkdir -p $GEM_HOME
