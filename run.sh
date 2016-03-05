@@ -32,8 +32,8 @@ else
     export OLD_GEM_HOME=$GEM_HOME
     
     # install ruby gem
-    export GEM_HOME=$WERCKER_CACHE_DIR/html-proofer/gems
-    mkdir -p $GEM_HOME
+    #export GEM_HOME=$WERCKER_CACHE_DIR/html-proofer/gems
+    #mkdir -p $GEM_HOME
     gem install html-proofer $WERCKER_HTML_PROOFER_TEST_VERSION $no_doc
     
     export HTML_PROOF_COMMAND=$GEM_HOME/bin/htmlproof
