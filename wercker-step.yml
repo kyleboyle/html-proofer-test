@@ -1,5 +1,5 @@
 name: html-proofer-test
-version: 1.0.13
+version: 1.0.14
 description: |
     Downloads ruby gem html-proofer and runs its html integrity checks on your static html content
 type: build

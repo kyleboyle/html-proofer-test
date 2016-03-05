@@ -32,13 +32,11 @@ else
     export OLD_GEM_HOME=$GEM_HOME
     export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
     # install ruby gem
-    #export GEM_HOME=$WERCKER_CACHE_DIR/html-proofer/gems
-    #mkdir -p $GEM_HOME
+    export GEM_HOME=$WERCKER_CACHE_DIR/html-proofer/gems
+    mkdir -p $GEM_HOME
     gem install html-proofer $WERCKER_HTML_PROOFER_TEST_VERSION $no_doc
     
     export HTML_PROOF_COMMAND=$GEM_HOME/bin/htmlproof
-
-    ls -Rl $GEM_HOME
 fi
 
 eval $HTML_PROOF_COMMAND $WERCKER_SOURCE_DIR/$WERCKER_HTML_PROOFER_TEST_BASEDIR $WERCKER_HTML_PROOFER_TEST_ARGUMENTS
