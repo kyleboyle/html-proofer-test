@@ -13,8 +13,8 @@ else
     ruby_version=`ruby -v`
     echo "Found $ruby_version"
     
-    apt-get install -y ruby-dev
-    yum install -y ruby-dev
+    #apt-get install -y ruby-dev
+    #yum install -y ruby-dev
 
     # set correct gems argument for no documentation
     if [[ "$ruby_version" =~ "ruby 1" ]]; then
